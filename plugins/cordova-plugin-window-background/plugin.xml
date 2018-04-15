@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-window-background" version="1.0.1">
+  <name>Android Window Background</name>
+  <description>Plugin to set Android window background for Cordova/Ionic applications</description>
+  <license>MIT</license>
+  <author>WINTER</author>
+  <keywords>cordova,ionic,android,window background,color,background,window,theme,styles.xml</keywords>
+
+  <platform name="ios">
+    <config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
+      <string>Portuguese</string>
+    </config-file>
+    <config-file target="*-Info.plist" parent="UIStatusBarHidden">
+      <true/>
+    </config-file>
+    <config-file target="*-Info.plist" parent="UIViewControllerBasedStatusBarAppearance">
+      <false/>
+    </config-file>
+    <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+      <string>Precisa de acesso à localização para encontrar lojas próximas</string>
+    </config-file>
+    <config-file target="*-Info.plist" parent="NSContactsUsageDescription">
+      <string>Precisa de acesso aos contatos para pesquisar por amigos</string>
+    </config-file>
+  </platform>
+
+  <platform name="android">
+
+    <preference name="WINDOW_BACKGROUND_COLOR" />
+    <preference name="COLOR_PRIMARY" />
+    <preference name="COLOR_SECONDARY" />
+    <preference name="COLOR_ACCENT" />
+
+    <framework src="com.android.support:support-v4:+"/>
+    <framework src="com.android.support:appcompat-v7:+"/>
+    <framework src="com.android.support:cardview-v7:+"/>
+    <framework src="com.android.support:customtabs:+"/>
+    <framework src="com.android.support:design:26.+"/>
+
+    <source-file src="src/android/colors.xml" target-dir="res/values"/>
+    <source-file src="src/android/styles.xml" target-dir="res/values"/>
+    <source-file src="src/android/styles.xml" target-dir="res/values-v21"/>
+
+    <config-file target="res/values/colors.xml" parent="/*">
+      <color name="colorPrimary">$COLOR_PRIMARY</color>
+      <color name="colorPrimaryDark">$COLOR_SECONDARY</color>
+      <color name="colorAccent">$COLOR_ACCENT</color>
+      <color name="windowBackground">$WINDOW_BACKGROUND_COLOR</color>
+    </config-file>
+
+    <!-- inherit from the material theme -->
+    <config-file target="res/values-v21/styles.xml" parent="/*">
+      <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:windowDisablePreview">true</item>
+      </style>
+    </config-file>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- inherit from the holo theme -->
+    <config-file target="res/values/styles.xml" parent="/*">
+      <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:windowDisablePreview">true</item>
+      </style>
+    </config-file>
+
+    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
+      <application
+              android:allowBackup="false"
+              android:theme="@style/AppTheme">
+      </application>
+    </edit-config>
+
+  </platform>
+</plugin>

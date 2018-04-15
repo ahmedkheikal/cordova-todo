@@ -1,0 +1,48 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "ToDo",
+  "short_name": "ToDo",
+  "version": "com.todoapp.app",
+  "description": "A sample todo list app for learning",
+  "author": "Ahmed Heikal",
+  "icons": [
+    {
+      "src": "res/icon/android/todo.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "res/icon/android/todo.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "res/icon/android/todo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    },
+    {
+      "src": "res/icon/android/todo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    },
+    {
+      "src": "res/icon/android/todo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    },
+    {
+      "src": "res/icon/android/todo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    },
+    {
+      "src": "res/icon/android/todo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html",
+  "theme_color": "#a42819"
+}

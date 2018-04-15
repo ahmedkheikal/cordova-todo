@@ -1,0 +1,53 @@
+{
+  "_from": "git+https://github.com/winteragency/cordova-plugin-android-window-background.git",
+  "_id": "cordova-plugin-android-window-background@1.0.2",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-android-window-background",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/winteragency/cordova-plugin-android-window-background.git",
+    "rawSpec": "https://github.com/winteragency/cordova-plugin-android-window-background.git",
+    "saveSpec": "git+https://github.com/winteragency/cordova-plugin-android-window-background.git",
+    "fetchSpec": "https://github.com/winteragency/cordova-plugin-android-window-background.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/winteragency/cordova-plugin-android-window-background.git#a7d318b608a3cc9cef62dbeabf72365b2404c9a4",
+  "_spec": "https://github.com/winteragency/cordova-plugin-android-window-background.git",
+  "_where": "/media/ahmed/New Volume/Android Development/todoapp",
+  "author": {
+    "name": "WINTER",
+    "email": "info@winter.ax",
+    "url": "https://winter.ax"
+  },
+  "bugs": {
+    "url": "https://github.com/winteragency/cordova-plugin-android-window-background/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Plugin to set Android window background for Cordova/Ionic applications",
+  "homepage": "https://github.com/winteragency/cordova-plugin-android-window-background",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "payments",
+    "android",
+    "ionic",
+    "background",
+    "window",
+    "background"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-android-window-background",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/winteragency/cordova-plugin-android-window-background.git"
+  },
+  "version": "1.0.2"
+}

@@ -1,0 +1,50 @@
+{
+    "logs": [
+        {
+            "outputFile": "/media/ahmed/New Volume/Android Development/todoapp/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/media/ahmed/New Volume/Android Development/todoapp/platforms/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "115,179,221",
+                        "endColumns": "63,41,58",
+                        "endOffsets": "174,216,275"
+                    }
+                },
+                {
+                    "source": "/media/ahmed/New Volume/Android Development/todoapp/platforms/android/app/src/main/res/values/cordova-window-background-strings.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "59",
+                        "endOffsets": "110"
+                    }
+                },
+                {
+                    "source": "/media/ahmed/New Volume/Android Development/todoapp/platforms/android/app/src/main/res/values/cordova-window-background-styles.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "280",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "463"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.todoapp.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>ToDo</name>
+    <description>
+      A sample todo list app for learning
+    </description>
+    <author email="dev@cordova.apache.org" href="http://ahmedheikal.com">
+        Ahmed Heikal
+    </author>
+    <icon density="mdpi" height="57" platform="android" src="res/icon/android/todo.png" width="57" />
+    <icon density="mdpi" height="57" platform="browser" src="res/icon/android/todo.png" width="57" />
+    <icon src="res/icon/android/todo.png" />
+    <key>UIStatusBarHidden</key>
+    <true />
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false />
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/icon/android/todo.png" />
+    <icon density="mdpi" src="res/icon/android/todo.png" />
+    <icon density="hdpi" src="res/icon/android/todo.png" />
+    <icon density="xhdpi" src="res/icon/android/todo.png" />
+    <preference name="StatusBarBackgroundColor" value="#a42819" />
+    <preference name="HeaderColor" value="#a42819" />
+</widget>

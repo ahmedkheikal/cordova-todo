@@ -1,0 +1,54 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-statusbar": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-statusbar@2.4.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/apache/cordova-plugin-splashscreen.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-headercolor": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/tomloprod/cordova-plugin-headercolor"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-window-background": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-window-background"
+    },
+    "is_top_level": true,
+    "variables": {
+      "WINDOW_BACKGROUND_COLOR": "#a42819"
+    }
+  },
+  "cordova-plugin-android-window-background": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/winteragency/cordova-plugin-android-window-background.git"
+    },
+    "is_top_level": true,
+    "variables": {
+      "WINDOW_BACKGROUND_COLOR": "#a42819"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "_from": "cordova-plugin-window-background",
+  "_id": "cordova-plugin-window-background@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-sulIDPtbbOL133945aQcfUEzm1HzoyPhrGEs2DUYzZzvFnjdxCM7kDmrlWbdYR+LD16hd+sArtiqoaEs5oC5AA==",
+  "_location": "/cordova-plugin-window-background",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-window-background",
+    "name": "cordova-plugin-window-background",
+    "escapedName": "cordova-plugin-window-background",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-window-background/-/cordova-plugin-window-background-1.0.1.tgz",
+  "_shasum": "26cbdb6c168b3233541abd1a57e487826bf591cf",
+  "_spec": "cordova-plugin-window-background",
+  "_where": "/media/ahmed/New Volume/Android Development/todoapp",
+  "author": {
+    "name": "Douglas Zaltron",
+    "email": "douglaszaltron@gmail.com",
+    "url": "https://douglaszaltron.com"
+  },
+  "bugs": {
+    "url": "https://github.com/douglaszaltron/cordova-plugin-window-background/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Plugin to set Android window background for Cordova/Ionic applications",
+  "homepage": "https://github.com/douglaszaltron/cordova-plugin-window-background",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "android",
+    "ionic",
+    "background",
+    "window",
+    "background"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cordova-plugin-window-background",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/douglaszaltron/cordova-plugin-window-background.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}

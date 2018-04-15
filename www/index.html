@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#a42819">
+    <!-- Your app title -->
+    <title>Todo List</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="framework7/dist/css/framework7.min.css">
+    <link rel="stylesheet" href="node_modules/framework7/dist/css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Path to your custom app styles-->
+    <!-- <link rel="stylesheet" href="path/to/my-app.css"> -->
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title center">To Do List</div>
+            </div>
+          </div>
+
+          <!-- Toolbar -->
+          <div class="toolbar tabbar">
+            <div class="toolbar-inner">
+              <a href="#tab1" class="tab-link tab-link-active">Upcoming</a>
+              <a href="#tab2" class="tab-link">Past</a>
+              <a href="#tab3" class="tab-link">Link 3</a>
+
+            </div>
+          </div>
+          <!-- <div class="toolbar">
+            <div class="toolbar-inner">
+
+
+            </div>
+          </div> -->
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <div class="container">
+              <p>Main List</p>
+
+            </div>
+
+
+
+            <!-- Tabs swipeable wrapper, required to switch tabs with swipes -->
+            <div class="tabs-swipeable-wrap">
+              <!-- Tabs, tabs wrapper -->
+              <div class="tabs">
+                <!-- Tab 1, active by default -->
+                <div id="tab1" class="tab tab-active">
+
+                  <div class="list">
+                    <ul>
+                      <!-- Single checkbox item -->
+                      <li>
+                        <label class="item-checkbox item-content">
+                          <!-- Checkbox input -->
+                          <input type="checkbox"/>
+                          <!-- Checkbox icon -->
+                          <i class="icon icon-checkbox"></i>
+                          <div class="item-inner">
+                            <!-- Checkbox Title -->
+                            <div class="item-title">Books</div>
+                          </div>
+                        </label>
+                      </li>
+                      <!-- Single checkbox item -->
+                      <li>
+                        <label class="item-checkbox item-content">
+                          <!-- Checkbox input -->
+                          <input type="checkbox" checked/>
+                          <!-- Checkbox icon -->
+                          <i class="icon icon-checkbox"></i>
+                          <div class="item-inner">
+                            <!-- Checkbox Title -->
+                            <div class="item-title">Books</div>
+                          </div>
+                        </label>
+                      </li>
+                      <!-- Another checkbox item -->
+                      <li>
+                        <label class="item-checkbox item-content">
+                          <!-- Checked by default -->
+                          <input type="checkbox" checked/>
+                          <i class="icon icon-checkbox"></i>
+                          <div class="item-inner">
+                            <div class="item-title">Music</div>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="item-content item-input">
+                        <div class="item-inner">
+                          <!-- "item-floating-label" class on item title -->
+                          <div class="item-title item-floating-label">Name</div>
+                          <div class="item-input-wrap">
+                            <input type="text" name="name">
+                            <span class="input-clear-button"></span>
+                          </div>
+                        </div>
+                        <div class="item-media">
+                          <button class="button button-fill">Add</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Tab 2 -->
+                <div id="tab2" class="tab">
+                  ... Tab 2 content ...
+                </div>
+                <!-- Tab 3 -->
+                <div id="tab3" class="tab">
+                  ... Tab 3 content ...
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Link to another page -->
+            <a href="/about/">About app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="framework7/dist/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="my-app.js"></script>
+  </body>
+</html>
