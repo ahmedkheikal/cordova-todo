@@ -45,7 +45,7 @@
           <div class="toolbar tabbar">
             <div class="toolbar-inner">
               <a href="#tab1" class="tab-link tab-link-active">Upcoming</a>
-              <a href="#tab2" class="tab-link">Past</a>
+              <a href="#tab2" class="tab-link">Done</a>
               <a href="#tab3" class="tab-link">Link 3</a>
 
             </div>
@@ -73,9 +73,9 @@
                 <!-- Tab 1, active by default -->
                 <div id="tab1" class="tab tab-active">
 
-                  <div class="list">
+                  <div class="list list-undone">
                     <ul>
-                      <!-- Single checkbox item -->
+                      <!-- sample elements before dynamic rendering -->
                       <li>
                         <label class="item-checkbox item-content">
                           <!-- Checkbox input -->
@@ -126,11 +126,18 @@
                         </div>
                       </li>
                     </ul>
+
                   </div>
                 </div>
                 <!-- Tab 2 -->
                 <div id="tab2" class="tab">
-                  ... Tab 2 content ...
+                  <div class="list list-done">
+                    <ul>
+
+
+                    </ul>
+
+                  </div>
                 </div>
                 <!-- Tab 3 -->
                 <div id="tab3" class="tab">

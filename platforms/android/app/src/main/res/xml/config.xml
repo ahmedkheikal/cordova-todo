@@ -51,4 +51,5 @@
     <preference name="StatusBarBackgroundColor" value="#a42819" />
     <preference name="HeaderColor" value="#a42819" />
     <preference name="SplashScreen" value="screen" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
 </widget>

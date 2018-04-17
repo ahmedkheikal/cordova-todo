@@ -36,6 +36,7 @@
         <splash density="port-mdpi" src="res/screen/android/sample-red.jpg" />
         <splash density="port-xhdpi" src="res/screen/android/sample-red.jpg" />
         <preference name="SplashScreen" value="screen" />
+        <preference name="ShowSplashScreenSpinner" value="false" />
     </platform>
     <platform name="browser">
         <allow-intent href="market:*" />
