@@ -37,6 +37,7 @@ var mainView = app.views.create('.view-main');
 
 // end app init
 
+
 $(document).ready(function () {
 
   $('.list > ul').html('');
@@ -154,7 +155,7 @@ $(document).ready(function () {
           <!-- "item-floating-label" class on item title -->
           <div class="item-title item-floating-label">Name</div>
           <div class="item-input-wrap">
-            <input type="text" name="name">
+            <input type="text" value="">
             <span class="input-clear-button"></span>
           </div>
         </div>
@@ -166,7 +167,8 @@ $(document).ready(function () {
   }
   // application logic goes here after document.ready and all element rendering
   // NOTE: cordova onDeviceReady isn't working with me
-  $('.list > ul input[type=checkbox]').change(function (e) {
+  $(document).on('click', '.list > ul input[type=checkbox]', function (e) {
+  // $('.list > ul input[type=checkbox]').change(function (e) {
     var index = $(this).attr('data-index');
     if ($(this).is(':checked')) {
       // NOTE: update data to make done = 1
@@ -182,7 +184,33 @@ $(document).ready(function () {
       window.localStorage.setItem('todos', JSON.stringify(todos));
     }
   })
-  $('.item-inner button').click(function (e) {
+  $('.item-media > button').click(function (e) {
+    // adding a new todo
+    todos.push({
+      title: $('.item-input-wrap input[type=text]').val(),
+      done: '0'
+    });
+    // getting added item to var newItem
+    var newItem  = todos[todos.length - 1];
+    $('.item-input-wrap input[type=text]').val('');
+
+    window.localStorage.removeItem('todos');
+    window.localStorage.setItem('todos', JSON.stringify(todos));
+
+    $('.list-undone > ul > li:last').before(`
+      <li>
+        <label class="item-checkbox item-content">
+          <!-- Checkbox input -->
+          <input type="checkbox" data-index=`+ todos.indexOf(newItem) +` />
+          <!-- Checkbox icon -->
+          <i class="icon icon-checkbox"></i>
+          <div class="item-inner">
+            <!-- Checkbox Title -->
+            <div class="item-title">`+ newItem.title +`</div>
+          </div>
+        </label>
+      </li>
+    `);
 
   })
 

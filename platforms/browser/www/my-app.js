@@ -167,7 +167,8 @@ $(document).ready(function () {
   }
   // application logic goes here after document.ready and all element rendering
   // NOTE: cordova onDeviceReady isn't working with me
-  $('.list > ul input[type=checkbox]').change(function (e) {
+  $(document).on('click', '.list > ul input[type=checkbox]', function (e) {
+  // $('.list > ul input[type=checkbox]').change(function (e) {
     var index = $(this).attr('data-index');
     if ($(this).is(':checked')) {
       // NOTE: update data to make done = 1
@@ -183,7 +184,7 @@ $(document).ready(function () {
       window.localStorage.setItem('todos', JSON.stringify(todos));
     }
   })
-  $('.item-media button').click(function (e) {
+  $('.item-media > button').click(function (e) {
     // adding a new todo
     todos.push({
       title: $('.item-input-wrap input[type=text]').val(),
@@ -196,11 +197,11 @@ $(document).ready(function () {
     window.localStorage.removeItem('todos');
     window.localStorage.setItem('todos', JSON.stringify(todos));
 
-    $('.list-undone > ul').append(`
+    $('.list-undone > ul > li:last').before(`
       <li>
         <label class="item-checkbox item-content">
           <!-- Checkbox input -->
-          <input type="checkbox" data-index=`+ newItem.indexOf() +` />
+          <input type="checkbox" data-index=`+ todos.indexOf(newItem) +` />
           <!-- Checkbox icon -->
           <i class="icon icon-checkbox"></i>
           <div class="item-inner">
