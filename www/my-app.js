@@ -1,24 +1,4 @@
-
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-
-
-
-}
-// (function () {
-//   var json = JSON.stringify({
-//     'code': '1',
-//     'status': [
-//     {'afsd': 'afds'},
-//     {'afsd': 'afds'},
-//     {'afsd': 'afds'},
-//     ]
-//   });
-//   alert(json)
-// }())
-
+// start app init
 var app = new Framework7({
   // App root element
   root: '#app',
@@ -55,18 +35,26 @@ var app = new Framework7({
 
 var mainView = app.views.create('.view-main');
 
-
+// end app init
 
 $(document).ready(function () {
-  // window.localStorage.removeItem('todos') // clears previous data to refresh everytime just for testing.
 
   $('.list > ul').html('');
   if (typeof window.localStorage.getItem('todos') === 'undefined' || window.localStorage.getItem('todos') == null) {
     var storage = window.localStorage;
     console.log(storage);
+
+    /**
+     * sample json data for testing
+     * production app must have an empty array in this value
+     * var value = JSON.stringify(
+     *   []
+     *  );
+     */
+
+
     var value = JSON.stringify(
       [
-
         {
           title: 'task undone 1',
           done: '0',
@@ -93,6 +81,7 @@ $(document).ready(function () {
     );
     storage.setItem('todos', value)
 
+    // appending add todo input
 
     $('.list > ul').append(`
       <li class="item-content item-input">
@@ -111,8 +100,8 @@ $(document).ready(function () {
     `);
 
   } else {
+     // get todos from localStorage
     var todos = JSON.parse( window.localStorage.getItem('todos') );
-    console.log(window.localStorage);
 
     /**
      * looping through JSON input
@@ -124,10 +113,10 @@ $(document).ready(function () {
       if (todos[i].done == '0') {
         var checked = '';
         $('.list-undone > ul').append(`
-          <li data-index=`+ i +`>
+          <li>
             <label class="item-checkbox item-content">
               <!-- Checkbox input -->
-              <input type="checkbox"`+ checked +`/>
+              <input type="checkbox"`+ checked +` data-index=`+ i +` />
               <!-- Checkbox icon -->
               <i class="icon icon-checkbox"></i>
               <div class="item-inner">
@@ -143,7 +132,7 @@ $(document).ready(function () {
           <li data-index=`+ i +`>
             <label class="item-checkbox item-content">
               <!-- Checkbox input -->
-              <input type="checkbox"`+ checked +`/>
+              <input type="checkbox"`+ checked +` data-index=`+ i +` />
               <!-- Checkbox icon -->
               <i class="icon icon-checkbox"></i>
               <div class="item-inner">
@@ -158,7 +147,8 @@ $(document).ready(function () {
 
 
     }
-    $('.list > ul').append(`
+    // appending add todo input
+    $('.list-undone > ul').append(`
       <li class="item-content item-input">
         <div class="item-inner">
           <!-- "item-floating-label" class on item title -->
@@ -174,15 +164,23 @@ $(document).ready(function () {
       </li>
     `);
   }
-  setTimeout(function() {
-    navigator.splashscreen.hide();
-  }, 2000);
   // application logic goes here after document.ready and all element rendering
   // NOTE: cordova onDeviceReady isn't working with me
-  $('.list > ul').change(function (e) {
-    alert ('checkbox check')
-    window.localStorage.setItem('todos', window.localStorage.getItem('todos'))
-
+  $('.list > ul input[type=checkbox]').change(function (e) {
+    var index = $(this).attr('data-index');
+    if ($(this).is(':checked')) {
+      // NOTE: update data to make done = 1
+      console.log(todos[index]);
+      todos[index].done = '1';
+      window.localStorage.removeItem('todos')
+      window.localStorage.setItem('todos', JSON.stringify(todos));
+    } else {
+      // NOTE: update data to make done = 0
+      console.log(todos[index]);
+      todos[index].done = '0';
+      window.localStorage.removeItem('todos')
+      window.localStorage.setItem('todos', JSON.stringify(todos));
+    }
   })
   $('.item-inner button').click(function (e) {
 
