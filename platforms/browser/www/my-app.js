@@ -167,7 +167,7 @@ $(document).ready(function () {
   }
   // application logic goes here after document.ready and all element rendering
   // NOTE: cordova onDeviceReady isn't working with me
-  $(document).on('click', '.list > ul input[type=checkbox]', function (e) {
+  $(document).on('change', '.list > ul input[type=checkbox]', function (e) {
   // $('.list > ul input[type=checkbox]').change(function (e) {
     var index = $(this).attr('data-index');
     if ($(this).is(':checked')) {
